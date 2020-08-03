@@ -1,0 +1,117 @@
+.featured {
+	margin: 90px 0;
+
+	.featured__title {
+		text-align: center;
+		font-size: 26px;
+		line-height: 30px;
+		letter-spacing: 2.6px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @color-gray;
+	}
+	
+	.featured__block {
+		display: flex;
+		justify-content: space-between;
+	}
+	.featured__element {
+		flex-basis: 23%;
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto 20px;
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 17px;
+			margin: 7px 0;
+
+			a {
+				font-size: 15px;
+				line-height: 17px;
+				text-decoration: none;
+				color: @black;
+				font-weight: bold;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.featured__brand {
+			color: @brand-color;
+		}
+		.featured__price {
+			font-weight: bold;
+			span {
+				text-decoration: line-through;
+				font-weight: normal;
+				margin-right: 10px;
+			}
+		}
+	}
+	.featured__btn {
+		.btn();
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: 0.6px;
+		width: 175px;
+		border-radius: 60px;
+		background: transparent;
+		color: @black;
+		border: 2px solid #d9c8aa;
+		margin: 50px auto;
+		padding: 18px 0;
+
+		&:hover {
+			color: @white;
+		}
+	}
+
+	.owl-nav {
+		button.owl-prev, button.owl-next {
+			background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+			width: 49px;
+			height: 49px;
+			border: none;
+			box-shadow: none;
+			position: absolute;
+			left: -55px;
+			outline: none;
+			top: 40%;
+			cursor: pointer;
+			transform: translateY(-50%);
+		}
+		button.owl-prev {
+			&:hover {
+				background-position: 0 -49px;
+			}
+		}
+		button.owl-next {
+			background-position: -49px 0;
+			left: auto;
+      right: -55px;
+
+      &:hover {
+        background-position: -49px -49px;
+      } 
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+
+	.featured {
+		width: calc(100% - 100px);
+		margin: 90px auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.featured {
+		margin: 25px auto;
+	}
+}

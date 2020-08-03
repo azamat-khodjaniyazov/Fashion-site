@@ -1,0 +1,163 @@
+.products {
+	margin: 90px 0;
+
+	.products__title {
+		font-size: 26px;
+		line-height: 30px;
+		letter-spacing: 2.6px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @color-gray;
+		}
+
+		.products__block {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 40px 0;
+		}
+
+		.products__element {
+			flex-basis: 31.5%;
+			position: relative;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		p {
+			text-align: center;
+			margin: 20px 0;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 5.6px;
+		}
+
+		a {
+			.btn();
+			font-size: 13px;
+			line-height: 20px;
+			letter-spacing: 0.78px;
+			width: 175px;
+			border-radius: 60px;
+			padding: 20px 0;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 20px;
+		}
+
+	.owl-nav {
+
+		button.owl-prev {
+			position: absolute;
+			left: -65px;
+			bottom: 260px;
+			background-color: @btn-color;
+			cursor: pointer;
+			width: 80px;
+			height: 35px;
+			outline: none;
+			transform: rotate(-90deg);
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		button.owl-prev::before {
+				content: 'PREV';
+			}
+		button.owl-next {
+			position: absolute;
+			bottom: 260px;
+			right: -65px;
+			background-color: @btn-color;
+			cursor: pointer;
+			width: 80px;
+			height: 35px;
+			outline: none;
+			transform: rotate(-90deg);
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		button.owl-next::before {
+				content: 'NEXT';
+			}
+	}
+
+	.owl-dots {
+				text-align: center;
+				padding: 0 0 15px 0;
+				position: absolute;
+				bottom: -35px;
+				
+				.owl-dot {
+					width: 10px;
+					height: 10px;
+					border-radius: 10px;
+					background-color: @white;
+					box-sizing: border-box;
+					border: 1px solid @black;
+					box-shadow: none;
+					padding: 0;
+					margin: 0 5px;
+					cursor: pointer;
+				}
+				.active {
+					background-color: @black;
+				}
+			}
+}
+
+@media (max-width: 1300px) {
+
+	.products {
+		width: calc(100% - 100px);
+		margin: 90px auto;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.products {
+		margin: 0 auto;
+
+		.products__block {
+
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.products {
+
+		.products__block {
+			margin-top: 25px;
+
+			.products__element {
+
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.products {
+		margin: 0 auto;
+
+		.products__block {
+
+			.products__element {
+				flex-basis: 100%;
+				margin: 10px 0;
+			}
+		}
+	}
+}
